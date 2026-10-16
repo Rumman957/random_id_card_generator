@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    text-decoration-line: none;
+    color: white;
+    /* outline: 1px solid white; */
+}
+:root {
+    --ff:'Poiret One','sans-serif';
+    --main-bg-color:#1C1F2C;
+    --sec-bg-color: #262837;
+}
+body {
+    background-color: var(--main-bg-color);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2d2d2d;
+    padding: 1rem 2rem;
+}
+header .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: var(--ff);
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+header nav ul .icon {
+    width: 40px;
+    height: 40px;
+}
+.link {
+    cursor: pointer;
+}
+ul li {
+    background-color: white;
+    border-radius: 15px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .hero {
+    width: 40vw;
+    margin-inline:auto;
+    background-color: var(--sec-bg-color);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+main .hero h1 {
+    font-family: var(--ff);
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+    margin-inline: auto;
+}
+footer p {
+    width: max-content;
+    margin-inline: auto;
+}
+footer {
+    width: 100vw;
+}
