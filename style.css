@@ -26,7 +26,7 @@ header {
 }
 header .logo {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: var(--ff);
 }
 header nav ul {
@@ -35,21 +35,16 @@ header nav ul {
     gap: 1rem;
 }
 header nav ul .icon {
-    width: 40px;
-    height: 40px;
-}
-.link {
-    cursor: pointer;
-}
-ul li {
+    width: 2.5rem;
+    height: 2.5rem;
     background-color: white;
     border-radius: 15px;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+
+.link, .generate-btn {
+    cursor: pointer;
+}
+
 main .hero {
     width: 40vw;
     margin-inline:auto;
@@ -57,9 +52,27 @@ main .hero {
     padding: 2rem;
     border-radius: 20px;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 6px 7px -3px black;
 }
 main .hero h1 {
     font-family: var(--ff);
+    margin-bottom: 5rem;
+}
+.generate-btn {
+    background-color: #514E65;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: .8rem 1rem;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+.generate-btn:hover {
+   background-color: var(--main-bg-color)
 }
 
 footer {
@@ -70,7 +83,25 @@ footer {
 footer p {
     width: max-content;
     margin-inline: auto;
+    font-size: .8rem;
 }
 footer {
     width: 100vw;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:600px){
+    html {
+        font-size: 14px;
+    }
+    main .hero {
+        width: 80vw;
+    }
 }
