@@ -18,10 +18,7 @@ function fetchData(personName, personEmail, personImg, personImgContainer, loadi
         personImgContainer.style.border = 'none';
         loadingBg.classList.add('hide');
     })
-    // if (personImg.src === ''){
-    //      personImg.innerText = 'Error loading';
-    //     personImg.style.color = 'red';
-    // }
+   
     xhr.addEventListener('error', () => {
         personName.innerText = 'Error loading';
         personName.style.color = 'red';
