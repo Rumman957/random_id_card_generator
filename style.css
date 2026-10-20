@@ -117,6 +117,7 @@ main .hero h1 {
     color: rgb(171, 171, 171);
     font-size: 1.1rem;
     display: inline;
+
 }
 
 .card {
@@ -214,4 +215,25 @@ footer p {
         width: 80vw;
     }
 
+}
+
+@media (450px < width <=720px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 25rem;
+    }
+}
+@media (width>1200px){
+    header {
+        justify-content: space-around;
+    }
+    main .hero {
+        max-width: 50rem;
+    }
 }

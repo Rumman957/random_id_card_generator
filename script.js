@@ -1,5 +1,6 @@
 const generateBtn = document.querySelector('.generate-btn');
 const cardsContainer = document.querySelector('.cards-container');
+
 if (!navigator.onLine) {
     alert('Internet connection is required for fetching data.');
     generateBtn.innerText = "Connect to internet";
@@ -7,9 +8,10 @@ if (!navigator.onLine) {
 }
 else {
     generateBtn.addEventListener('click', () => {
-    createCard();
-})
+        createCard();
+    })
 }
+
 function fetchData(personName, personEmail, personImg, personImgContainer, loadingBg, personCountry) {
     // Make request for data
     const xhr = new XMLHttpRequest();
@@ -101,6 +103,7 @@ function createCard() {
     nameContainer.append(nameLabel, personName);
     const emailContainer = document.createElement('div');
     emailContainer.append(emailLabel, personEmail);
+    emailContainer.style.overflowWrap = 'break-word'
     const personCountryContainer = document.createElement('div');
     personCountryContainer.append(countryLabel, personCountry);
 
@@ -119,34 +122,3 @@ function createCard() {
     fetchData(personName, personEmail, personImg, personImgContainer, loadingBg, personCountry);
 }
 
-// generateBtn.addEventListener('click', () => {
-//     createCard();
-// })
-
-// Checking internet connection
-
-// async function checkRealInternet() {
-//     // If the browser already says offline, don't bother fetching
-//     if (!navigator.onLine) return false;
-
-//     try {
-//         // Fetch a tiny piece of data with a cache-busting timestamp
-//         const response = await fetch("https://typicode.com", {
-//             method: "HEAD", // HEAD request only downloads headers, saving data
-//             cache: "no-store"
-//         });
-//         return response.ok; // Returns true if status is 200-299
-//     } catch (error) {
-//         return false; // Fetch failed, meaning no actual internet access
-//     }
-// }
-
-// // Usage Example:
-// window.addEventListener('online', async () => {
-//     const hasInternet = await checkRealInternet();
-//     if (hasInternet) {
-//         console.log("Confirmed: You are fully connected to the internet!");
-//     } else {
-//         console.log("Connected to router, but NO internet access available.");
-//     }
-// });
